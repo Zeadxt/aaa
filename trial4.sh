@@ -80,8 +80,8 @@ xpjam=1
 Login=trial-`</dev/urandom tr -dc X-Z0-9 | head -c3`
 #read -p "Expired (Jam): " xpjam
 Pass=1
-exp1=`date -d "$xpjam hour" +"%R"`
-useradd -e `date -d "$xpjam hour" +"%R"` -s /bin/false -M $Login
+exp1=`date -d "$xpjam hour" +"%H"`
+useradd -e `date -d "$xpjam hour" +"%H"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 
 #domen2=`cat /etc/xray/nsdomain`
