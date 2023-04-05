@@ -65,6 +65,7 @@ export NETWORK_IFACE="$(ip route show to default | awk '{print $5}')"
 
 
 clear
+now=`date +"%Y-%m-%d %H:%M:%S"`
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
 domen=`cat /etc/xray/domain`
