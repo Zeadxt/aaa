@@ -69,7 +69,7 @@ touch
 clear
 _APISERVER=127.0.0.1:10085 
 #_Xray=/usr/local/bin/xray/
-_Xray=/usr/local/etc/xray/config.json/
+_Xray=/etc/xray/config.json
 
 apidata () {
     local ARGS=
