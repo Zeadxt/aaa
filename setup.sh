@@ -57,62 +57,6 @@ export Script_Mode="Stable"
 export Auther=".geovpn"
 
 #IZIN SCRIPT
-#MYIP=$(curl -sS ipv4.icanhazip.com)
-BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Zeadxt/izin/main/ip > /root/tmp
-    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
-    for user in "${data[@]}"
-    do
-    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
-    else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
-    fi
-    done
-    rm -f /root/tmp
-}
-
-MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Zeadxt/izin/main/ip | grep $MYIP | awk '{print $2}')
-echo $Name > /usr/local/etc/.$Name.ini
-CekOne=$(cat /usr/local/etc/.$Name.ini)
-
-Bloman () {
-if [ -f "/etc/.$Name.ini" ]; then
-CekTwo=$(cat /etc/.$Name.ini)
-    if [ "$CekOne" = "$CekTwo" ]; then
-        res="Expired"
-    fi
-else
-res="Permission Accepted..."
-fi
-}
-
-PERMISSION () {
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Zeadxt/izin/main/ip | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-    Bloman
-    else
-    res="Permission Denied!"
-    fi
-    BURIQ
-}
-
-x="ok"
-PERMISSION
-
-if [ "$res" = "Expired" ]; then
-Exp="\e[36mExpired\033[0m"
-rm -f /home/needupdate > /dev/null 2>&1
-else
-Exp=$(curl -sS https://raw.githubusercontent.com/Zeadxt/izin/main/ip | grep $MYIP | awk '{print $3}')
-fi
-sleep 2
 
 # // Exporting Script Version
 export VERSION="1.1"
@@ -417,7 +361,6 @@ echo "   - SSH Websocket           : 80" | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
 echo "   - Stunnel5                : 447, 777" | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
-#echo "   - slowdns                 : 2269, 3369" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
 echo "   - Nginx                   : 81" | tee -a log-install.txt
 echo "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
@@ -427,7 +370,6 @@ echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
 echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
 echo "   - Trojan WS               : 443" | tee -a log-install.txt
 echo "   - Trojan GO               : 443" | tee -a log-install.txt
-#echo "   - Trojan GFW              : 443" | tee -a log-install.txt
 echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
