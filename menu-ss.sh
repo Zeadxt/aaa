@@ -218,7 +218,8 @@ echo -e ""
 echo -e "     ${BICyan}[${BIWhite}1${BICyan}] Add Account Sodosok     "
 echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Delete Account Sodosok     "
 echo -e "     ${BICyan}[${BIWhite}3${BICyan}] Renew Account Sodosok     "
-echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Cek User XRAY     "
+echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Trial User XRAY Sodosok    "
+echo -e "     ${BICyan}[${BIWhite}5${BICyan}] Cek User XRAY     "
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BIYellow}Press x or [ Ctrl+C ] • To-${BIWhite}Exit${NC}"
 echo ""
@@ -228,7 +229,8 @@ case $opt in
 1) clear ; add-ssws ;;
 2) clear ; delws ;;
 3) clear ; renewws;;
-4) clear ; cekws ;;
+4) clear ; trial3 ;;
+5) clear ; cekws ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu ;;
