@@ -217,6 +217,7 @@ echo -e ""
 echo -e "     ${BICyan}[${BIWhite}1${BICyan}] Add Account Trojan      "
 echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Delete Account Trojan      "
 echo -e "     ${BICyan}[${BIWhite}3${BICyan}] Renew Account Trojan      "
+echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Trial User XRAY Trojan     "
 echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Cek User XRAY     "
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BIYellow}Press x or [ Ctrl+C ] • To-${BIWhite}Exit${NC}"
@@ -227,7 +228,8 @@ case $opt in
 1) clear ; add-tr ;;
 2) clear ; delws ;;
 3) clear ; renewws;;
-4) clear ; cekws ;;
+4) clear ; trial1 ;;
+5) clear ; cekws ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu ;;
