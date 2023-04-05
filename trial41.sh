@@ -79,9 +79,9 @@ wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | a
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;41;36m            SSH Account            \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-read -p "Username : " Login
-read -p "Password : " Pass
-read -p "Expired (hari): " masaaktif
+Login=
+Pass=
+masaaktif=
 
 IP=$(curl -sS ifconfig.me);
 ossl=`cat /root/log-install.txt | grep -w "OpenVPN" | cut -f2 -d: | awk '{print $6}'`
