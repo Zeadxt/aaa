@@ -414,6 +414,6 @@ history -c
 #else
 #exit 0
 
-echo "VPS REBOOT IN 10 SECOND"
+echo -ne "${BIRed}VPS REBOOT IN 10 SECOND${NC}"
 sleep 10
 reboot
