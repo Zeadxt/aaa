@@ -407,9 +407,13 @@ rm -fr /root/cf1.sh
 rm -fr /root/cf2.sh
 history -c
 
-echo -ne "[ ${yell}WARNING${NC} ] Do You Need Reboot Now ? (y/n)? "
-read answer
-if [ "$answer" == "${answer#[Yy]}" ] ;then
+#echo -ne "[ ${yell}WARNING${NC} ] Do You Need Reboot Now ? (y/n)? "
+#read answer
+#if [ "$answer" == "${answer#[Yy]}" ] ;then
+#reboot
+#else
+#exit 0
+
+VPS REBOOT IN 10 SECOND
+sleep 10
 reboot
-else
-exit 0
