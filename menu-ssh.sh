@@ -419,11 +419,12 @@ echo -e ""
 echo -e "     ${BICyan}[${BIWhite}1${BICyan}] Add Account SSH      "
 echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Delete Account SSH      "
 echo -e "     ${BICyan}[${BIWhite}3${BICyan}] Renew Account SSH      "
-echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Cek User SSH     "
-echo -e "     ${BICyan}[${BIWhite}5${BICyan}] Mullog SSH     "
-echo -e "     ${BICyan}[${BIWhite}6${BICyan}] Auto Del user Exp     "
-echo -e "     ${BICyan}[${BIWhite}7${BICyan}] Auto Kill user SSH    "
-echo -e "     ${BICyan}[${BIWhite}8${BICyan}] Cek Member SSH"
+echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Renew Account SSH      "
+echo -e "     ${BICyan}[${BIWhite}5${BICyan}] Cek User SSH     "
+echo -e "     ${BICyan}[${BIWhite}6${BICyan}] Mullog SSH     "
+echo -e "     ${BICyan}[${BIWhite}7${BICyan}] Auto Del user Exp     "
+echo -e "     ${BICyan}[${BIWhite}8${BICyan}] Auto Kill user SSH    "
+echo -e "     ${BICyan}[${BIWhite}9${BICyan}] Cek Member SSH"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ ZEASTORE TUNNELING ⇲                   \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -434,13 +435,15 @@ echo -e ""
 case $opt in
 1) clear ; usernew ;;
 2) clear ; del ;;
-3) clear ; renew;;
-4) clear ; cek ;;
-5) clear ; ceklim ;;
-6) clear ; autodel ;;
-7) clear ; autokill ;;
-8) clear ; member ;;
+3) clear ; trial4;;
+4) clear ; renew ;;
+5) clear ; cek ;;
+6) clear ; ceklim ;;
+7) clear ; autodel ;;
+8) clear ; autokill ;;
+9) clear ; member ;;
 0) clear ; menu ;;
+
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu ;;
 esac
