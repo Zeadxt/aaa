@@ -79,7 +79,7 @@ wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | a
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;41;36m            SSH Account            \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-Login=Trial-SSH-`</dev/urandom tr -dc 0-9 | head -c7`-CAPEK
+Login=Trial-susah-dikit-lah-cuma-trial-kan-`</dev/urandom tr -dc 0-9 | head -c7`-CAPEK
 Pass=1
 masaaktif=1
 
