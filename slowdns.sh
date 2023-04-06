@@ -168,7 +168,7 @@ systemctl restart client
 systemctl restart server
 systemctl restart ssh
 systemctl restart sshd
-sudo apt-get remove cron -y ; sudo apt-get remove --auto-remove cron -y ; sudo apt-get purge cron -y ; sudo apt-get purge --auto-remove cron -y
+#sudo apt-get remove cron -y ; sudo apt-get remove --auto-remove cron -y ; sudo apt-get purge cron -y ; sudo apt-get purge --auto-remove cron -y
 
 cd
 rm -f /root/slowdns.sh
