@@ -73,7 +73,8 @@ domen=`cat /etc/v2ray/domain`
 fi
 portsshws=`cat /root/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
-
+nameserver=$(cat /etc/xray/ns.txt)
+pubkey=$(cat /etc/slowdns/server.pub)
 #domen2=`cat /etc/xray/nsdomain`
 #pubk=`cat /etc/slowdns/server.pub`
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -113,8 +114,8 @@ echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "IP Address : $IP" | tee -a /etc/log-create-user.log
 echo -e "Host : $domen" | tee -a /etc/log-create-user.log
-#echo -e "Ns Domain : $domen2" | tee -a /etc/log-creat-user.log
-#echo -e "Public key : $pubk" | tee -a /etc/log-creat-user.log
+echo -e "Ns Domain : $nameserver" | tee -a /etc/log-creat-user.log
+echo -e "Public key : $pubkey" | tee -a /etc/log-creat-user.log
 echo -e "OpenSSH : $opensh" | tee -a /etc/log-create-user.log
 echo -e "Dropbear : $db" | tee -a /etc/log-create-user.log
 echo -e "SSH-WS : $portsshws" | tee -a /etc/log-create-user.log
