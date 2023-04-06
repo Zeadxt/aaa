@@ -4,7 +4,7 @@
 
 <p align="center"><img src="https://img.shields.io/badge/Service-Multiport (XRAY)-cyan"></p>
 
-<pre><code>apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -q https://raw.githubusercontent.com/Zeadxt/asd/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh</code></pre>
+<pre><code>apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -q https://raw.githubusercontent.com/Zeadxt/aaa/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh</code></pre>
 
  
 <p align="center"<h2>DONATE ME IN</h2></p>
