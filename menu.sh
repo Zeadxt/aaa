@@ -200,7 +200,7 @@ echo -e "${BICyan} ⇲  ${BICyan}ISP-VPS         :  $Yellow}$ISPVPS${NC}"
 echo -e "${BICyan} ⇲  ${BICyan}DATE&TIME       :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"               
 echo -e "${BICyan} ⇲  ${BICyan}NAME SERVEE     :  ${Yellow}$nameserver ${NC}"               
 echo -e "${BICyan} ⇲  ${BICyan}PUBLIC KEY      :  ${Yellow}$pubkey ${NC}"               
-C KEY      :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"               
+               
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                      ⇱ STATUS SERVICE ⇲                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
