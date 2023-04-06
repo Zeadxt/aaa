@@ -154,8 +154,8 @@ echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "IP Address : $IP" | tee -a /etc/log-create-user.log
 echo -e "Host : $domen" | tee -a /etc/log-create-user.log
-#echo -e "Ns Domain : $domen2" | tee -a /etc/log-creat-user.log
-#echo -e "Public key : $pubk" | tee -a /etc/log-creat-user.log
+echo -e "Ns Domain : $nameserver" | tee -a /etc/log-creat-user.log
+echo -e "Public key : $pubkey" | tee -a /etc/log-creat-user.log
 echo -e "OpenSSH : $opensh" | tee -a /etc/log-create-user.log
 echo -e "Dropbear : $db" | tee -a /etc/log-create-user.log
 echo -e "SSH-WS : $portsshws" | tee -a /etc/log-create-user.log
