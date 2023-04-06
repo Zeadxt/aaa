@@ -9,28 +9,7 @@ if [ "${EUID}" -ne 0 ]; then
 fi
 clear
 
-CEKEXPIRED () {
-    today=$(date -d +1day +%Y-%m-%d)
-    Exp1=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $3}')
-    if [[ $today < $Exp1 ]]; then
-    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
-    else
-    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
-    echo -e "\e[31mLETS RENEW IP TO ADMIN\e[0m"
-    exit 0
-fi
-}
-IZIN=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermission Accepted...\e[0m"
-CEKEXPIRED
-else
-echo -e "\e[31mPermission Denied!\e[0m";
-echo -e "\e[31mREGISTER IP TO ADMIN FIRST\e[0m"
-rm -f setup.sh
-exit 0
-fi
-clear
+
 # // Exporting Language to UTF-8
 export LANG='en_US.UTF-8'
 export LANGUAGE='en_US.UTF-8'
@@ -86,6 +65,30 @@ export VERSION="1.1"
  
 # // Exporint IP AddressInformation
 export IP=$( curl -s https://ipinfo.io/ip/ )
+
+
+CEKEXPIRED () {
+    today=$(date -d +1day +%Y-%m-%d)
+    Exp1=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $3}')
+    if [[ $today < $Exp1 ]]; then
+    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
+    else
+    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
+    echo -e "\e[31mLETS RENEW IP TO ADMIN\e[0m"
+    exit 0
+fi
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo -e "\e[32mPermission Accepted...\e[0m"
+CEKEXPIRED
+else
+echo -e "\e[31mPermission Denied!\e[0m";
+echo -e "\e[31mREGISTER IP TO ADMIN FIRST\e[0m"
+rm -f setup.sh
+exit 0
+fi
+clear
 
 # // Set Time To Jakarta / GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
