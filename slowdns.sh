@@ -36,7 +36,7 @@ export UNDERLINE="\e[4m"
 clear
 # ===============================================
 cd
-wget -q -O /root/ns.sh "https://autosscript.site/slow/ns.sh" ; chmod +x ns.sh ; ./ns.sh
+wget -q -O /root/ns.sh "https://raw.githubusercontent.com/Zeadxt/aaa/main/ns.sh" ; chmod +x ns.sh ; ./ns.sh
 echo -e "${OKEY} Processing For( ${GREEN}{ Installing }${NC} )"
 nameserver=$(cat /etc/xray/ns.txt)
 #echo -e "${WARNING} Update ${GREEN} ${UNDERLINE} ${NC} )"
@@ -63,7 +63,7 @@ echo -e "${OKEY} Starting( ${GREEN} Istall slowdns ${NC} )"
 #// port
 cd
 mkdir -m 777 /etc/slowdns
-wget -q -O /root/plugin.zip "https://autosscript.site/slow/plugin.zip"
+wget -q -O /root/plugin.zip "https://raw.githubusercontent.com/Zeadxt/aaa/main/plugin.zip"
 unzip plugin.zip
 rm -r -f plugin.zip
 cd dnstt-plugin
@@ -87,7 +87,7 @@ rm -r -f /root/dnstt-plugin
 #chmod +x /usr/local/sbin/addssh
 #wget -q -O /usr/local/sbin/trialssh "https://fsidvpn.live/trialssh.sh"
 #chmod +x /usr/local/sbin/trialssh
-wget -q -O /etc/ssh/sshd_config "https://autosscript.site/slow/sshd"
+wget -q -O /etc/ssh/sshd_config "https://raw.githubusercontent.com/Zeadxt/aaa/main/sshd.config"
 chmod 700 /etc/ssh/sshd_config
 
 #install client.service
