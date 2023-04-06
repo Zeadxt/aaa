@@ -70,7 +70,7 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/Zeadxt/asd/main"
+export Server_URL="raw.githubusercontent.com/Zeadxt/aaa/main"
 export Server1_URL="raw.githubusercontent.com/Zeastore/limit/main"
 export izin="raw.githubusercontent.com/Zeadxt/izin/main"
 export GitUser="Zeadxt"
