@@ -1,27 +1,5 @@
 #!/bin/bash
 
-IZIN=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermission Accepted...\e[0m"
-else
-echo -e "\e[31mPermission Denied!\e[0m";
-echo -e "\e[31mREGISTEE IP TO ADMIN#\e[0m"
-exit 0
-fi
-#EXPIRED
-expired=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $3}')
-echo $expired > /root/expired.txt
-today=$(date -d +1day +%Y-%m-%d)
-while read expired
-do
-	exp=$(echo $expired | curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $3}')	if [[ $exp < $today ]]; then
-		Exp2="\033[1;31mExpired\033[0m"
-        else
-        Exp2=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $3}')
-	fi
-done < /root/expired.txt
-rm /root/expired.txt
-Name=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $2}')
 
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
@@ -83,6 +61,29 @@ fi
 
 # // Exporting IP Address
 export IP=$( curl -s https://ipinfo.io/ip/ )
+
+IZIN=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo -e "\e[32mPermission Accepted...\e[0m"
+else
+echo -e "\e[31mPermission Denied!\e[0m";
+echo -e "\e[31mREGISTEE IP TO ADMIN#\e[0m"
+exit 0
+fi
+#EXPIRED
+expired=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $3}')
+echo $expired > /root/expired.txt
+today=$(date -d +1day +%Y-%m-%d)
+while read expired
+do
+	exp=$(echo $expired | curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $3}')	if [[ $exp < $today ]]; then
+		Exp2="\033[1;31mExpired\033[0m"
+        else
+        Exp2=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $3}')
+	fi
+done < /root/expired.txt
+rm /root/expired.txt
+Name=$(curl -sS https://raw.githubusercontent.com/Zeadxt/kzl/main/prem | grep $MYIP | awk '{print $2}')
 
 # // Exporting Network Interface
 export NETWORK_IFACE="$(ip route show to default | awk '{print $5}')"
