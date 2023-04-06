@@ -85,6 +85,7 @@ CEKEXPIRED
 else
 echo -e "\e[31mPermission Denied!\e[0m";
 echo -e "\e[31mREGISTER IP TO ADMIN FIRST\e[0m"
+sleep 5
 rm -f setup.sh
 exit 0
 fi
