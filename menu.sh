@@ -188,7 +188,7 @@ ISPVPS=$( curl -s ipinfo.io/org )
 ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 bmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
 nameserver=$(cat /etc/xray/ns.txt)
-pub.key=$(cat /etc/slowdns/server.pub)
+pubkey=$(cat /etc/slowdns/server.pub)
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                    ⇱ SERVER INFORMATION ⇲                       \E[0m"
@@ -199,7 +199,7 @@ echo -e "${BICyan} ⇲  ${BICyan}IP-VPS          :  ${Yellow}$IPVPS${NC}"
 echo -e "${BICyan} ⇲  ${BICyan}ISP-VPS         :  $Yellow}$ISPVPS${NC}"  
 echo -e "${BICyan} ⇲  ${BICyan}DATE&TIME       :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"               
 echo -e "${BICyan} ⇲  ${BICyan}NAME SERVEE     :  ${Yellow}$nameserver ${NC}"               
-echo -e "${BICyan} ⇲  ${BICyan}PUBLIC KEY      :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"               
+echo -e "${BICyan} ⇲  ${BICyan}PUBLIC KEY      :  ${Yellow}$pubkey ${NC}"               
 C KEY      :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"               
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                      ⇱ STATUS SERVICE ⇲                         \E[0m"
