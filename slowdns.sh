@@ -87,8 +87,8 @@ rm -r -f /root/dnstt-plugin
 #chmod +x /usr/local/sbin/addssh
 #wget -q -O /usr/local/sbin/trialssh "https://fsidvpn.live/trialssh.sh"
 #chmod +x /usr/local/sbin/trialssh
-wget -q -O /etc/ssh/sshd_config "https://raw.githubusercontent.com/Zeadxt/aaa/main/sshd.config"
-chmod 700 /etc/ssh/sshd_config
+#wget -q -O /etc/ssh/sshd_config "https://raw.githubusercontent.com/Zeadxt/aaa/main/sshd.config"
+#chmod 700 /etc/ssh/sshd_config
 
 #install client.service
 cat > /etc/systemd/system/client.service << END
