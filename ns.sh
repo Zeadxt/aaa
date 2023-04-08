@@ -15,13 +15,13 @@ off='\x1b[m'
 
 clear
 apt install jq curl -y
-DOMAIN=slow-motion.live
+DOMAIN=zeavpn.biz.id
 domen=$( cat /etc/xray/domain)
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-SUB_DOMAIN=${sub}.slow-motion.live
+sub=$(</dev/urandom tr -dc 0-9 | head -c5)
+SUB_DOMAIN=${sub}.zeavpn.biz.id
 NS_DOMAIN=dns.${SUB_DOMAIN}
 CF_ID=paoandest@gmail.com
-CF_KEY=1d158d0efc4eef787222cefff0b6d20981462
+CF_KEY=e706e0ce65fb5c6e233c233e6e2e6614d4aec
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS NS for ${NS_DOMAIN}..."
