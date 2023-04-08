@@ -174,7 +174,9 @@ chmod +x /root/cf2.sh
 ./cf2.sh
 elif test $dom -eq 4; then
 read -rp "Domain/Host: " -e host
-echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
+echo "IP=$host" > /var/lib/scrz-prem/ipvps.conf
+echo $host > /etc/xray/domain
+echo $host >> /root/domain
 else 
 echo "Not Found Argument"
 exit 1
@@ -418,6 +420,6 @@ history -c
 #else
 #exit 0
 
-echo -ne "${BIRed}VPS REBOOT IN 10 SECOND${NC}"
-sleep 10
+echo -ne "${BIRed}VPS REBOOT IN 5 SECOND${NC}"
+sleep 5
 reboot
