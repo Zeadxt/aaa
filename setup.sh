@@ -173,8 +173,8 @@ wget -q -O /root/cf2.sh "https://${Server_URL}/cf2.sh"
 chmod +x /root/cf2.sh
 ./cf2.sh
 elif test $dom -eq 4; then
-read -rp "Enter Your Domain : " domen 
-echo $domen > /root/domain
+read -rp "Domain/Host: " -e host
+echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 else 
 echo "Not Found Argument"
 exit 1
