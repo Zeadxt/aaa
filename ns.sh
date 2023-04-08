@@ -20,7 +20,7 @@ domen=$( cat /etc/xray/domain)
 sub=$(</dev/urandom tr -dc 0-9 | head -c5)
 SUB_DOMAIN=${sub}.zeavpn.biz.id
 NS_DOMAIN=dns.${SUB_DOMAIN}
-CF_ID=paoandest@gmail.com
+CF_ID=pribadi.no99@gmail.com
 CF_KEY=e706e0ce65fb5c6e233c233e6e2e6614d4aec
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
