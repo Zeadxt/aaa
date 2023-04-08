@@ -7,10 +7,10 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 apt install jq curl -y
 sub=$(</dev/urandom tr -dc a-z | head -c4)
-DOMAIN=zeaking.my.id
-SUB_DOMAIN=${sub}-vip.zeaking.my.id
-CF_ID=mulahkual@gmail.com
-CF_KEY=565df838cbdf80722e12eb5b1d7186143b74e
+DOMAIN=zeavpn.biz.id
+SUB_DOMAIN=${sub}-vip.zeavpn.biz.id
+CF_ID=pribadi.no99@gmail.com
+CF_KEY=e706e0ce65fb5c6e233c233e6e2e6614d4aec
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
