@@ -67,23 +67,27 @@ export NETWORK_IFACE="$(ip route show to default | awk '{print $5}')"
 touch
 
 clear
-_APISERVER=127.0.0.1:10085 
-#_Xray=/usr/local/bin/xray/
-_Xray=/etc/xray/config.json
+
+_APISERVER=127.0.0.1:10000
+_XRAY=/usr/local/bin/xray
 
 apidata () {
     local ARGS=
     if [[ $1 == "reset" ]]; then
-      ARGS="reset: true"
+      ARGS="-reset=true"
     fi
-    $_Xray api statsquery --server=$_APISERVER "${ARGS}" \
+    $_XRAY api statsquery --server=$_APISERVER "${ARGS}" \
     | awk '{
         if (match($1, /"name":/)) {
             f=1; gsub(/^"|link"|,$/, "", $2);
             split($2, p,  ">>>");
             printf "%s:%s->%s\t", p[1],p[2],p[4];
         }
-        else if (match($1, /"value":/) && f){ f = 0; printf "%.0f\n", $2; }
+        else if (match($1, /"value":/) && f){
+          f = 0;
+          gsub(/"/, "", $2);
+          printf "%.0f\n", $2;
+        }
         else if (match($0, /}/) && f) { f = 0; print 0; }
     }'
 }
@@ -104,6 +108,13 @@ print_sum() {
 }
 
 DATA=$(apidata $1)
-echo "-------------User------------" 
+echo "------------Inbound----------"
+print_sum "$DATA" "inbound"
+echo "-----------------------------"
+echo "------------Outbound----------"
+print_sum "$DATA" "outbound"
+echo "-----------------------------"
+echo
+echo "-------------User------------"
 print_sum "$DATA" "user"
 echo "-----------------------------"
