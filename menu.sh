@@ -187,8 +187,6 @@ IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
 ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 bmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
-nameserver=$(cat /etc/xray/ns.txt)
-pubkey=$(cat /etc/slowdns/server.pub)
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                    ⇱ SERVER INFORMATION ⇲                       \E[0m"
@@ -197,10 +195,7 @@ echo -e "${BICyan} ⇲  ${BICyan}SCRIPT BY       :  ${Yellow}FREE TUNNELING PROJ
 echo -e "${BICyan} ⇲  ${BICyan}Current Domain  :  ${Yellow}$(cat /etc/xray/domain)${NC}" 
 echo -e "${BICyan} ⇲  ${BICyan}IP-VPS          :  ${Yellow}$IPVPS${NC}"                  
 echo -e "${BICyan} ⇲  ${BICyan}ISP-VPS         :  ${Yellow}$ISPVPS${NC}"  
-echo -e "${BICyan} ⇲  ${BICyan}DATE&TIME       :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"               
-echo -e "${BICyan} ⇲  ${BICyan}NAME SERVEE     :  ${Yellow}$nameserver ${NC}"               
-echo -e "${BICyan} ⇲  ${BICyan}PUBLIC KEY      :  ${Yellow}$pubkey ${NC}"               
-               
+echo -e "${BICyan} ⇲  ${BICyan}DATE&TIME       :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"                              
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                      ⇱ STATUS SERVICE ⇲                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -251,7 +246,6 @@ case $opt in
 15) clear ; cek-trafik ;;
 16) clear ; cek-speed ;;
 17) clear ; cek-bandwidth ;;
-#18) clear ; cek-ram ;;
 18) clear ; limit-speed ;;
 19) clear ; wbm ;;
 20) clear ; cat /root/log-install.txt ;;
