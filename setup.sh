@@ -182,10 +182,10 @@ sleep 2
 
 #install jembot
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
-echo -e " \E[41;1;39m           ⇱ Install Jembot ⇲            \E[0m$NC"
+echo -e " \E[41;1;39m           ⇱ Install Perlengkapan ⇲            \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1 
-wget -q https://${Server_URL2}/jembot.sh && chmod +x jembot.sh && ./jembot.sh
+wget -q https://${Server_URL2}/jempol.sh && chmod +x jempol.sh && ./jempol.sh
 #install ssh-vpn
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m          ⇱ Install SSH / WS ⇲           \E[0m$NC"
