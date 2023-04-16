@@ -196,7 +196,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "${BICyan} ⇲  ${BICyan}SCRIPT BY       :  ${Yellow}FREE TUNNELING PROJECT${NC}"    
 echo -e "${BICyan} ⇲  ${BICyan}Current Domain  :  ${Yellow}$(cat /etc/xray/domain)${NC}" 
 echo -e "${BICyan} ⇲  ${BICyan}IP-VPS          :  ${Yellow}$IPVPS${NC}"                  
-echo -e "${BICyan} ⇲  ${BICyan}ISP-VPS         :  $Yellow}$ISPVPS${NC}"  
+echo -e "${BICyan} ⇲  ${BICyan}ISP-VPS         :  ${Yellow}$ISPVPS${NC}"  
 echo -e "${BICyan} ⇲  ${BICyan}DATE&TIME       :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"               
 echo -e "${BICyan} ⇲  ${BICyan}NAME SERVEE     :  ${Yellow}$nameserver ${NC}"               
 echo -e "${BICyan} ⇲  ${BICyan}PUBLIC KEY      :  ${Yellow}$pubkey ${NC}"               
