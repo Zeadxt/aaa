@@ -332,12 +332,6 @@ else
 gg="AM"
 fi
 
-apt-get remove --purge nginx* -y
-
-sleep 2
-
-apt install nginx -y
-
 echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
