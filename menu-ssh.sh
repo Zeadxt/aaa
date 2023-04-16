@@ -418,7 +418,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 echo -e "     ${BICyan}[${BIWhite}1${BICyan}] Add Account SSH      "
 echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Delete Account SSH      "
-echo -e "     ${BICyan}[${BIWhite}3${BICyan}] Renew Account SSH      "
+echo -e "     ${BICyan}[${BIWhite}3${BICyan}] Trial Account SSH      "
 echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Renew Account SSH      "
 echo -e "     ${BICyan}[${BIWhite}5${BICyan}] Cek User SSH     "
 echo -e "     ${BICyan}[${BIWhite}6${BICyan}] Mullog SSH     "
