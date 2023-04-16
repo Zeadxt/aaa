@@ -152,9 +152,7 @@ echo -e "$white\033[0;34m┌─────────────────�
 echo -e "                          ⇱ INSTALL DOMAIN ⇲            "
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 echo "1. Use Domain zeaking.my.id"
-echo "2. Use Domain dxtxtr.me"
-echo "3. Use Domain zeavpn.my.id"
-echo "4. Use Your Private Domain"
+echo "2. Use Your Private Domain"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 echo -e""
 read -rp "Choose Your Domain Installation : " dom 
@@ -164,15 +162,11 @@ clear
 wget -q -O /root/cf.sh "https://${Server_URL}/cf.sh"
 chmod +x /root/cf.sh
 ./cf.sh
-elif test $dom -eq 2; then
+elif test $dom -eq 3; then
 wget -q -O /root/cf1.sh "https://${Server_URL}/cf1.sh"
 chmod +x /root/cf1.sh
 ./cf1.sh
-elif test $dom -eq 3; then
-wget -q -O /root/cf2.sh "https://${Server_URL}/cf2.sh"
-chmod +x /root/cf2.sh
-./cf2.sh
-elif test $dom -eq 4; then
+elif test $dom -eq 2; then
 read -rp "Domain/Host: " -e host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 fi
@@ -186,13 +180,6 @@ echo "$host" >> /root/domain
 
 sleep 2
 
-#echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
-#echo -e "                          ⇱ INSTALL DOMAIN ⇲            "
-#echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
-#sleep 1
-#install cf
-#wget https://raw.githubusercontent.com/Zeastore/asd/main/cf.sh && chmod +x cf.sh && ./cf.sh
-#rm -f /root/cf.sh
 #install jembot
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m           ⇱ Install Jembot ⇲            \E[0m$NC"
@@ -205,8 +192,6 @@ echo -e " \E[41;1;39m          ⇱ Install SSH / WS ⇲           \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1
 wget -q https://${Server_URL}/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
-#wget -q https://raw.githubusercontent.com/Zeastore/sld/main/install-sldns.sh && chmod +x install-sldns.sh && ./install-sldns.sh
-#install ins-xray
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m            ⇱ Install Xray ⇲             \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
