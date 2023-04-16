@@ -174,12 +174,7 @@ chmod +x /root/cf2.sh
 ./cf2.sh
 elif test $dom -eq 4; then
 read -rp "Domain/Host: " -e host
-echo "IP=$host" > /var/lib/scrz-prem/ipvps.conf
-echo $host > /etc/xray/domain
-echo $host >> /root/domain
-else 
-echo "Not Found Argument"
-exit 1
+echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 fi
 echo -e "${GREEN}Done!${NC}"
 sleep 2
@@ -351,6 +346,12 @@ gg="PM"
 else
 gg="AM"
 fi
+
+apt-get remove --purge nginx* -y
+
+sleep 2
+
+apt install nginx -y
 
 echo "1.1" >> /home/.ver
 rm -fr /root/limit
