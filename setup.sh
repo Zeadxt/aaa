@@ -233,7 +233,7 @@ wget -q -O /usr/bin/menu "https://${Server_URL}/menu.sh"
 wget -q -O /usr/bin/wbm "https://${Server_URL}/webmin.sh"
 wget -q -O /usr/bin/xp "https://${Server_URL}/xp.sh"
 #wget -q -O /usr/bin/update "https://raw.githubusercontent.com/Zeastore/asd/main/update.sh"
-wget -q -O /usr/bin/xp-hour "https://${Server_URL}/xp-hour.sh"
+#wget -q -O /usr/bin/xp-hour "https://${Server_URL}/xp-hour.sh"
 wget -q -O /usr/bin/bw "https://${Server_URL}/m-bw.sh"
 wget -q -O /usr/bin/trial "https://${Server_URL}/trial.sh"
 #wget -q -O /usr/bin/bw "https://${Server_URL}/m-bw.sh"
@@ -247,7 +247,7 @@ chmod +x /usr/bin/trial1
 chmod +x /usr/bin/trial2
 chmod +x /usr/bin/trial3
 chmod +x /usr/bin/trial4
-chmod +x /usr/bin/xp-hour
+#chmod +x /usr/bin/xp-hour
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
 chmod +x /usr/bin/add-vless
