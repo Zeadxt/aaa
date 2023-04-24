@@ -169,6 +169,7 @@ chmod +x /root/cf1.sh
 elif test $dom -eq 2; then
 read -rp "Domain/Host: " -e host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
+ "IP=$host" >> /xray/domain
 fi
 echo -e "${GREEN}Done!${NC}"
 sleep 2
